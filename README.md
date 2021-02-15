@@ -43,3 +43,9 @@ This application allows you to :
 - Only functional and integration tests are added
 - A helm chart using the image built
 
+## Microk8s usage 
+- Install helm3 client 
+- Export kubeconfig : microk8s config >> $HOME/.kube/config
+- Run helm install chart
+
+
