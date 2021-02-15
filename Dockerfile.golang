@@ -1,0 +1,15 @@
+FROM golang:1.15.8
+
+RUN go env
+ADD . /go/src/app/
+ENV GO111MODULE=on
+RUN cd /go/src/app/ && go build ./... && go test ./...
+
+#get all dependencies for makefile tests
+RUN go get -u golang.org/x/lint/golint
+RUN go get -u golang.org/x/tools/cmd/goimports
+RUN go get -u github.com/securego/gosec/v2/cmd/gosec
+RUN go get -u github.com/fzipp/gocyclo/cmd/gocyclo
+
+
+WORKDIR /go/src/app
