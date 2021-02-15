@@ -1,0 +1,10 @@
+apiVersion: v1
+description: Golang Rest API Application
+name: sampleApp
+version: 1.0.0
+icon: https://upload.wikimedia.org/wikipedia/commons/2/23/Golang.png
+home: https://golang.org
+keywords:
+- go
+- http
+- web
