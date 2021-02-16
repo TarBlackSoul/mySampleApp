@@ -43,9 +43,8 @@ This application allows you to :
 - Only functional and integration tests are added
 - A helm chart using the image built
 
-## Microk8s usage 
-- Install helm3 client 
-- Export kubeconfig : microk8s config >> $HOME/.kube/config
-- Run helm install chart
-
-
+## Microk8s setup 
+- Enable helm3: microk8s enable helm3
+- Enable  dns : microk8s.enable dns
+- Enable docker registry : microk8s.enable registry
+- Push the docker image on local registry : docker tag myappimage localhost:32000/myapp_image && docker push localhost:32000/myapp_image
