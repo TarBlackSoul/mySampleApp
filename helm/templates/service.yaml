@@ -15,4 +15,3 @@ spec:
     protocol: {{ .Values.service.ports.app.protocol }}
   selector:
     app: {{ template "fullname" . }}
-
