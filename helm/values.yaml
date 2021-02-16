@@ -1,16 +1,15 @@
+
+replicas: 1
+image:
+  repository: localhost:32000/myapp_image
+  tag: "latest"
+  pullPolicy: IfNotPresent
 service:
   enabled: true
   name: helloworld-go
-  type: ClusterIP
+  type: NodePort
   ports:
     app:
       port: 9000
       targetPort: http
       protocol: TCP
-
-
-replicas: 1
-image:
-  repository: "myapp_image"
-  tag: "latest"
-  pullPolicy: "IfNotPresent"
